@@ -12,6 +12,14 @@
 <form method="post">
 
 
+     /* hidden guarda conteudos entre o servidor e browser*/
+     <!--linha de comentario em HTML-->
+     @*esta linha de comentario e do RAZOR: nao visivel no browser*@
+    <input type = "hidden"  name="primeiroOperando" value=" @ViewBag.PrimeiroOperando"/>
+    <input type = "hidden"  name="operador" value="@ViewBag.Operador"/>
+    <input type = "hidden"  name="limpaEcra" value="@ViewBag.limpaEcra"/>
+
+
   <table border="0"
           style="border-spacing:3px;
                  border-collapse:collapse;
@@ -22,9 +30,9 @@
 
            
          <td colspan="4">
-            <input type="text"          /* tudo o que e input e enviado para o servidor*/
+            <input type="text"          /* tudo o que e input e enviado para o servidor, guarda dados*/
                    name="visor"         /* name permite indetificar o valor no servidor/ 
-                   value="@ViewBag.Visor"                    /* valor que aparece no ecra  */
+                   value="@ViewBag.Visor"                    /* valor que aparece no ecra, dados da view usados formnovalidate controller */
                    readonly="readonly"
                    style="text-align:right;
                           width:167px;"
