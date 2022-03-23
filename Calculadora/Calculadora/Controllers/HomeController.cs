@@ -22,6 +22,16 @@ namespace Calculadora.Controllers
         }
 
 
+        /// <summary>
+        /// 
+        /// Prepara a calculadora para ser apresentada, pela primeira vez ao utilizador
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+
+
         [HttpGet] //este anotador e facultativo
         public IActionResult Index(){
 
@@ -37,6 +47,22 @@ namespace Calculadora.Controllers
         /*Funcao resposanvel pela interacao do browser, metedo que recebe o pedido feito pelo browser*/
 
         //recebe os dados do servidor, valor do botao
+
+        /// <summary>
+        /// 
+        /// Prepara a calculadora na segunda interação e seguintes
+        /// 
+        /// </summary>
+        /// <param name="botao"> Valor do botão pressionado pelo utilizador, ao usar a calculadora </param>    
+        /// <param name="visor"> Valor do visor da calculadora  </param>
+        /// <param name="primeiroOperando"> na operação algebrica, valor do 1 operando</param>
+        /// <param name="Operador"> operacao a ser executada</param>
+        /// <param name="limpaEcra"> indica se o visor deve ser, ou nao reiniciado</param>
+        /// <returns></returns>
+        /// 
+
+
+
 
         [HttpPost] //SÓ qd o formulario for submetido em "psot" ele sera ecionado
         public IActionResult Index(
